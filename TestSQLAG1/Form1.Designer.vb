@@ -61,7 +61,7 @@ Partial Class Form1
         '
         Me.Button4.Location = New System.Drawing.Point(310, 31)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(218, 21)
+        Me.Button4.Size = New System.Drawing.Size(255, 21)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "SQLClient without ApplicationIntent"
         Me.Button4.UseVisualStyleBackColor = True
@@ -70,7 +70,7 @@ Partial Class Form1
         '
         Me.Button5.Location = New System.Drawing.Point(310, 72)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(218, 21)
+        Me.Button5.Size = New System.Drawing.Size(255, 21)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "SNAC ODBC without ApplicationIntent"
         Me.Button5.UseVisualStyleBackColor = True
@@ -79,7 +79,7 @@ Partial Class Form1
         '
         Me.Button6.Location = New System.Drawing.Point(310, 115)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(218, 21)
+        Me.Button6.Size = New System.Drawing.Size(255, 21)
         Me.Button6.TabIndex = 5
         Me.Button6.Text = "SNAC SQL OLE DB without ApplicationIntent"
         Me.Button6.UseVisualStyleBackColor = True
@@ -88,7 +88,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(577, 184)
+        Me.ClientSize = New System.Drawing.Size(610, 184)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
