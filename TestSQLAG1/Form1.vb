@@ -26,4 +26,32 @@
         MsgBox(objCmd.ExecuteScalar())
         SNACOLEDBConn.Close()
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        'Use SQLClient without ApplicationIntent
+        Dim SQLClientConn As New SqlClient.SqlConnection("data source=TestAG2Listener;integrated security=sspi;initial catalog=TSQL2012")
+        SQLClientConn.Open()
+        Dim objCmd As SqlClient.SqlCommand = New SqlClient.SqlCommand("select @@servername", SQLClientConn)
+        MsgBox(objCmd.ExecuteScalar())
+        SQLClientConn.Close()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        'Use SNAC ODBC without ApplicationIntent
+        Dim SNACODBCConn As New Odbc.OdbcConnection("Driver={SQL Server Native Client 11.0};server=TestAG2Listener;database=TSQL2012;trusted_connection=yes")
+        SNACODBCConn.Open()
+        Dim objCmd As Odbc.OdbcCommand = New Odbc.OdbcCommand("select @@servername", SNACODBCConn)
+        MsgBox(objCmd.ExecuteScalar())
+        SNACODBCConn.Close()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        'Use SNAC SQL OLE DB without ApplicationIntent
+        Dim SNACOLEDBConn As New OleDb.OleDbConnection
+        SNACOLEDBConn.ConnectionString = "Provider=sqlncli11;data source=TestAG2Listener;integrated security=sspi;initial catalog=TSQL2012"
+        SNACOLEDBConn.Open()
+        Dim objCmd As OleDb.OleDbCommand = New OleDb.OleDbCommand("select @@servername", SNACOLEDBConn)
+        MsgBox(objCmd.ExecuteScalar())
+        SNACOLEDBConn.Close()
+    End Sub
 End Class
